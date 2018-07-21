@@ -329,7 +329,7 @@ function SMARTBUFF_InitSpellIDs()
   S.LinkPriestChakra        = { SMARTBUFF_CHAKRA1, SMARTBUFF_CHAKRA2, SMARTBUFF_CHAKRA3 }; 
   
   -- Mage
---  SMARTBUFF_AB              = GetSpellInfo(1459);  --"Arcane Brilliance"
+  SMARTBUFF_AB              = GetSpellInfo(1459);  --"Arcane Intellect"
   SMARTBUFF_DALARANB        = GetSpellInfo(61316); --"Dalaran Brilliance"
   SMARTBUFF_FROSTARMOR      = GetSpellInfo(7302);  --"Frost Armor"
   SMARTBUFF_MAGEARMOR       = GetSpellInfo(6117);  --"Mage Armor"
@@ -349,7 +349,7 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_PRISBARRIER     = GetSpellInfo(235450);--"Prismatic Barrier"
   SMARTBUFF_BLAZBARRIER     = GetSpellInfo(235313);--"Blazing Barrier"
   SMARTBUFF_ARCANEFAMILIAR  = GetSpellInfo(205022);--"Arcane Familiar"
-  SMARTBUFF_ARCANEINTELLECT = GetSpellInfo(1459);  --"Arcane Intellect"
+--  SMARTBUFF_ARCANEINTELLECT = GetSpellInfo(1459);  --"Arcane Intellect"
   
   -- Mage buff links
   S.ChainMageArmor = { SMARTBUFF_FROSTARMOR, SMARTBUFF_MAGEARMOR, SMARTBUFF_MOLTENARMOR };
@@ -689,7 +689,7 @@ function SMARTBUFF_InitSpellList()
   -- Mage
   if (SMARTBUFF_PLAYERCLASS == "MAGE") then
     SMARTBUFF_BUFFLIST = {
---      {SMARTBUFF_AB, 60, SMARTBUFF_CONST_GROUP, {1,14,28,42,56,70,80}, nil, S.LinkInt, S.LinkInt},
+      {SMARTBUFF_AB, 60, SMARTBUFF_CONST_GROUP, {1,14,28,42,56,70,80}, nil, S.LinkInt},
       {SMARTBUFF_DALARANB, 60, SMARTBUFF_CONST_GROUP, {80,80,80,80,80,80,80}, nil, S.LinkInt, S.LinkInt},
       {SMARTBUFF_TEMPSHIELD, 0.067, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_AMPMAGIC, 0.1, SMARTBUFF_CONST_SELF},
@@ -709,7 +709,7 @@ function SMARTBUFF_InitSpellList()
 	  {SMARTBUFF_PRISBARRIER, 1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_BLAZBARRIER, 1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_REFRESHMENT, 0.03, SMARTBUFF_CONST_ITEM, nil, SMARTBUFF_CONJUREDMANA, nil, S.FoodMage},
-	  {SMARTBUFF_ARCANEINTELLECT, 60, SMARTBUFF_CONST_GROUP, {32}, "HPET;WPET;DKPET"}
+--	  {SMARTBUFF_ARCANEINTELLECT, 60, SMARTBUFF_CONST_GROUP, {32}, "HPET;WPET;DKPET"}
     };
   end
   
