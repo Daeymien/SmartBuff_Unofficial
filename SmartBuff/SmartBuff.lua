@@ -4448,8 +4448,8 @@ local function CreateScrollButton(name, parent, cBtn, onClick, onDragStop)
 	btn:SetWidth(ScrBtnSize);
 	btn:SetHeight(ScrBtnSize);
   --btn:RegisterForClicks("LeftButtonUp");
-	--btn:SetScript("OnClick", onClick);
-	btn:SetScript("OnMouseUp", onClick);
+	btn:SetScript("OnClick", onClick);
+	--btn:SetScript("OnMouseUp", onClick);
   
   if (onDragStop ~= nil) then
     btn:SetMovable(true);
