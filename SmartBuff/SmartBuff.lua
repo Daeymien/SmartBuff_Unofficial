@@ -448,7 +448,7 @@ function SMARTBUFF_OnEvent(self, event, ...)
     end
   elseif(event == "ADDON_LOADED" and arg1 == SMARTBUFF_TITLE) then
     isLoaded = true;
-    SMARTBUFF_FindItem("ScanBagsForSBInit");  
+--    SMARTBUFF_FindItem("ScanBagsForSBInit");  
   end
     
   if (event == "SMARTBUFF_UPDATE" and isLoaded and isPlayer and not isInit and not InCombatLockdown()) then
@@ -638,7 +638,7 @@ function SMARTBUFF_OnUpdate(self, elapsed)
   if self.Elapsed > 0 then 
     return 
   end
---  self.Elapsed = 0.2
+  self.Elapsed = 0.2
   
   if (not isInit) then
     if (isLoaded and GetTime() > tAutoBuff + 0.5) then
@@ -3065,7 +3065,7 @@ function SMARTBUFF_Options_Init(self)
     isParrot = true;    
   end
     
---  SMARTBUFF_FindItem("ScanBagsForSBInit");  
+  SMARTBUFF_FindItem("ScanBagsForSBInit");  
     
   SMARTBUFF_AddMsg(SMARTBUFF_VERS_TITLE .. " " .. SMARTBUFF_MSG_LOADED, true);
   SMARTBUFF_AddMsg("/sbm - " .. SMARTBUFF_OFT_MENU, true);
