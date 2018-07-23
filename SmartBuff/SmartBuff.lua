@@ -40,7 +40,7 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v8.0d";
+SMARTBUFF_VERSION       = "v8.0e";
 SMARTBUFF_VERSIONNR     = 80000;
 SMARTBUFF_TITLE         = "SmartBuff";
 SMARTBUFF_SUBTITLE      = "Supports you in cast buffs";
@@ -61,7 +61,7 @@ SMARTBUFF_BOOK_TYPE_SPELL = "spell";
 local GlobalCd = 1.5;
 local maxSkipCoolDown = 3;
 local maxRaid = 40;
-local maxBuffs = 36;
+local maxBuffs = 40;
 local maxScrollButtons = 50;
 local numBuffs = 0;
 
@@ -450,6 +450,7 @@ function SMARTBUFF_OnEvent(self, event, ...)
     end
   elseif(event == "ADDON_LOADED" and arg1 == SMARTBUFF_TITLE) then
     isLoaded = true;
+--    SMARTBUFF_FindItem("ScanBagsForSBInit");  
   end
     
   if (event == "SMARTBUFF_UPDATE" and isLoaded and isPlayer and not isInit and not InCombatLockdown()) then
@@ -4454,7 +4455,6 @@ local function CreateScrollButton(name, parent, cBtn, onClick, onDragStop)
 	btn:SetHeight(ScrBtnSize);
   --btn:RegisterForClicks("LeftButtonUp");
 	btn:SetScript("OnClick", onClick);
-
 --	btn:SetScript("OnMouseUp", onClick);
   
   if (onDragStop ~= nil) then

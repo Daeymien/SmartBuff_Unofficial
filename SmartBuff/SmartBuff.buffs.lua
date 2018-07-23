@@ -392,7 +392,7 @@ function SMARTBUFF_InitSpellIDs()
   
   -- Shaman
   SMARTBUFF_LIGHTNINGSHIELD = GetSpellInfo(192106); --"Lightning Shield"
-  SMARTBUFF_WATERSHIELD     = GetSpellInfo(52127);  --"Water Shield"
+ -- SMARTBUFF_WATERSHIELD     = GetSpellInfo(52127);  --"Water Shield"
   SMARTBUFF_EARTHSHIELD     = GetSpellInfo(974);    --"Earth Shield"
   SMARTBUFF_WATERWALKING    = GetSpellInfo(546);    --"Water Walking"
   SMARTBUFF_EMASTERY        = GetSpellInfo(16166);  --"Elemental Mastery"
@@ -689,7 +689,7 @@ function SMARTBUFF_InitSpellList()
   -- Mage
   if (SMARTBUFF_PLAYERCLASS == "MAGE") then
     SMARTBUFF_BUFFLIST = {
-      {SMARTBUFF_AB, 60, SMARTBUFF_CONST_GROUP, {1,14,28,42,56,70,80}, nil, S.LinkInt},
+      {SMARTBUFF_AB, 60, SMARTBUFF_CONST_GROUP, {1,14,28,42,56,70,80}, nil, S.LinkInt, S.LinkInt},
       {SMARTBUFF_DALARANB, 60, SMARTBUFF_CONST_GROUP, {80,80,80,80,80,80,80}, nil, S.LinkInt, S.LinkInt},
       {SMARTBUFF_TEMPSHIELD, 0.067, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_AMPMAGIC, 0.1, SMARTBUFF_CONST_SELF},
