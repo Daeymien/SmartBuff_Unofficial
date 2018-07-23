@@ -61,7 +61,7 @@ SMARTBUFF_BOOK_TYPE_SPELL = "spell";
 local GlobalCd = 1.5;
 local maxSkipCoolDown = 3;
 local maxRaid = 40;
-local maxBuffs = 36;
+local maxBuffs = 40;
 local maxScrollButtons = 50;
 local numBuffs = 0;
 
@@ -2637,21 +2637,24 @@ function SMARTBUFF_CheckBuff(unit, buffName, isMine)
   end
   local _, _, _, _, _, _, spellId = GetSpellInfo(buffName)
 	if (spellId) then
-  local buff, _, _, _, _, timeleft, caster = UnitAura(unit, spellId, nil, "HELPFUL");
-  if (buff) then
-    SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
-    if (buff == buffName) then
-      timeleft = timeleft - GetTime();
-      if (isMine and caster) then
-        if (SMARTBUFF_IsPlayer(caster)) then
-          return true, timeleft, caster;
-        end
-        return false, 0, nil;
-      end
-      return true, timeleft, SMARTBUFF_IsPlayer(caster);
+	  local i;
+	  for i=1,40 do
+        local buff, _, _, _, _, timeleft, caster = UnitAura(unit, i, "HELPFUL");
+          if (buff) then
+            SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
+            if (buff == buffName) then
+              timeleft = timeleft - GetTime();
+              if (isMine and caster) then
+                if (SMARTBUFF_IsPlayer(caster)) then
+                  return true, timeleft, caster;
+                end
+                return false, 0, nil;
+              end
+              return true, timeleft, SMARTBUFF_IsPlayer(caster);
+            end
+	      end
+	  end
     end
-	end
-  end
   return false, 0;
 end
 -- END SMARTBUFF_CheckUnitBuffs
