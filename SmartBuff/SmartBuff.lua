@@ -413,7 +413,9 @@ function SMARTBUFF_OnLoad(self)
   --self:RegisterEvent("PLAYER_AURAS_CHANGED");
   --self:RegisterEvent("ACTIONBAR_UPDATE_STATE");
     
-  self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+--  self:RegisterEvent("CHAT_MSG_SPELL_FAILED_LOCALPLAYER");
+--  self:RegisterEvent("UI_ERROR_MESSAGE");
+  self:RegisterEvent("UNIT_SPELLCAST_FAILED");
   self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED");
   
   --One of them allows SmartBuff to be closed with the Escape key
@@ -561,18 +563,22 @@ function SMARTBUFF_OnEvent(self, event, ...)
     end    
   end
     
-  if (event == "COMBAT_LOG_EVENT_UNFILTERED") then
-    if (type == "SPELL_CAST_FAILED") then
-      SMARTBUFF_AddMsgD("Spell failed: " .. arg1);
-      if (currentUnit and (string.find(currentUnit, "party") or string.find(currentUnit, "raid") or (currentUnit == "target" and O.Debug))) then
-        if (UnitName(currentUnit) ~= sPlayerName and O.BlacklistTimer > 0) then
-          cBlacklist[currentUnit] = GetTime();
-          if (currentUnit and UnitName(currentUnit)) then
-            SMARTBUFF_AddMsgWarn(UnitName(currentUnit).." ("..currentUnit..") blacklisted ("..O.BlacklistTimer.."sec)");
-          end
+  if (event == "UI_ERROR_MESSAGE") then
+    SMARTBUFF_AddMsgD(string.format("Error message: %s",arg1));
+  end
+
+--  if (event == "CHAT_MSG_SPELL_FAILED_LOCALPLAYER") then
+  if (event == "UNIT_SPELLCAST_FAILED") then
+    currentUnit = arg1;
+    SMARTBUFF_AddMsgD(string.format("Spell failed: %s",arg1));
+    if (currentUnit and (string.find(currentUnit, "party") or string.find(currentUnit, "raid") or (currentUnit == "target" and O.Debug))) then
+      if (UnitName(currentUnit) ~= sPlayerName and O.BlacklistTimer > 0) then
+        cBlacklist[currentUnit] = GetTime();
+        if (currentUnit and UnitName(currentUnit)) then
+          SMARTBUFF_AddMsgWarn(UnitName(currentUnit).." ("..currentUnit..") blacklisted ("..O.BlacklistTimer.."sec)");
         end
       end
-	end
+    end
     currentUnit = nil;
     
   elseif (event == "UNIT_SPELLCAST_SUCCEEDED") then
@@ -592,7 +598,7 @@ function SMARTBUFF_OnEvent(self, event, ...)
         if (not arg4) then arg4 = ""; end
         SMARTBUFF_AddMsgD("Spellcast succeeded: " .. arg1 .. ", " .. arg2 .. ", " .. arg3 .. ", " .. arg4)
         if (string.find(arg1, "party") or string.find(arg1, "raid")) then
-          spell = arg3;
+          spell = arg2;
         end        
         --SMARTBUFF_SetButtonTexture(SmartBuff_KeyButton, imgSB);
       end
@@ -2434,6 +2440,16 @@ end
 -- END SMARTBUFF_IsPlayer
 
 
+function UnitBuffByBuffName(target,buffname,filter)
+  for i = 1,40 do
+    name = UnitBuff(target, i, filter);
+    if not name then return end
+    if name == buffname then
+      return UnitBuff(target, i, filter);
+    end
+  end
+end
+
 -- Will return the name of the buff to cast
 function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
   if (not unit or (not buffN and not buffL)) then return end
@@ -2507,17 +2523,12 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
       for n, v in pairs(buffL) do
         if (v and v ~= defBuff) then
           SMARTBUFF_AddMsgD("Check linked buff ("..uname.."): "..v);
-		  for i=1,40 do
-          buff, icon, count, _, duration, timeleft, caster = UnitBuff(unit, i);
-		  local _, _, _, _, _, _, spellId = GetSpellInfo(v)
-			if (spellId) then
+          buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
             timeleft = timeleft - time;
             SMARTBUFF_AddMsgD("Linked buff found: "..buff..", "..timeleft..", "..icon);
             return nil, n, defBuff, timeleft, count;
           end
-		  end
-		  end
         end
       end
     end
@@ -2550,12 +2561,8 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
   -- Check default buff
   if (defBuff) then
     SMARTBUFF_AddMsgD("Check default buff ("..uname.."): "..defBuff);
-      for i=1, 40 do
- 	buff, icon, count, _, duration, timeleft, caster = UnitBuff(unit, i);
-		  local _, _, _, _, _, _, spellId = GetSpellInfo(defBuff);
---			if (spellId) then
---		  print(("%d=%s, %s, %.2f minutes left."):format(i,buff,icon,(timeleft-GetTime())/60));
-    if (defBuff == buff) then
+    buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, defBuff);
+    if (buff) then
       timeleft = timeleft - time;
       if (SMARTBUFF_IsPlayer(caster)) then
         SMARTBUFF_UpdateBuffDuration(defBuff, duration);
@@ -2563,8 +2570,6 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
       SMARTBUFF_AddMsgD("Default buff found: "..buff..", "..timeleft..", "..icon);
       return nil, 0, defBuff, timeleft, count;
     end
-	end
---	end
   end  
 
   -- Buff not found, return default buff
@@ -2583,15 +2588,12 @@ function SMARTBUFF_CheckBuffLink(unit, defBuff, buffT, buffL)
       for n, v in pairs(buffL) do
         if (v and v ~= defBuff) then
           SMARTBUFF_AddMsgD("Check linked buff ("..uname.."): "..v);
---		  local _, _, _, _, _, _, spellId = GetSpellInfo(v)
---			if (spellId) then
-          buff, icon, count, _, duration, timeleft, caster = UnitBuff(unit, v);
+          buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
             timeleft = timeleft - time;
             SMARTBUFF_AddMsgD("Linked buff found: "..buff..", "..timeleft..", "..icon);
             return nil, n, defBuff, timeleft, count;
           end
---		  end
         end
       end
     end
@@ -2631,30 +2633,34 @@ function SMARTBUFF_UpdateBuffDuration(buff, duration)
 end
 
 
+function UnitAuraBySpellName(target,spellname,filter)
+  for i = 1,40 do
+    name = UnitAura(target, i, filter);
+    if not name then return end
+    if name == spellname then
+      return UnitAura(target, i, filter);
+    end
+  end
+end
+
 function SMARTBUFF_CheckBuff(unit, buffName, isMine) 
   if (not unit or not buffName) then
     return false, 0;
   end
-  local _, _, _, _, _, _, spellId = GetSpellInfo(buffName)
-	if (spellId) then
-	  local i;
-	  for i=1,40 do
-        local buff, _, _, _, _, timeleft, caster = UnitAura(unit, i, "HELPFUL");
-          if (buff) then
-            SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
-            if (buff == buffName) then
-              timeleft = timeleft - GetTime();
-              if (isMine and caster) then
-                if (SMARTBUFF_IsPlayer(caster)) then
-                  return true, timeleft, caster;
-                end
-                return false, 0, nil;
-              end
-              return true, timeleft, SMARTBUFF_IsPlayer(caster);
-            end
-	      end
-	  end
+  local buff, _, _, _, _, timeleft, caster = UnitAuraBySpellName(unit, buffName, "HELPFUL");
+  if (buff) then
+    SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
+    if (buff == buffName) then
+      timeleft = timeleft - GetTime();
+      if (isMine and caster) then
+        if (SMARTBUFF_IsPlayer(caster)) then
+          return true, timeleft, caster;
+        end
+        return false, 0, nil;
+      end
+      return true, timeleft, SMARTBUFF_IsPlayer(caster);
     end
+  end
   return false, 0;
 end
 -- END SMARTBUFF_CheckUnitBuffs
@@ -4449,7 +4455,7 @@ local function CreateScrollButton(name, parent, cBtn, onClick, onDragStop)
 	btn:SetHeight(ScrBtnSize);
   --btn:RegisterForClicks("LeftButtonUp");
 	btn:SetScript("OnClick", onClick);
-	--btn:SetScript("OnMouseUp", onClick);
+--	btn:SetScript("OnMouseUp", onClick);
   
   if (onDragStop ~= nil) then
     btn:SetMovable(true);
