@@ -66,8 +66,10 @@ local function LoadToys()
 	for i = 1, nTotal do
 		local num = C_ToyBox.GetToyFromIndex(i);
 		local id, name, icon = C_ToyBox.GetToyInfo(num);
-		if (PlayerHasToy(id)) then
-		  S.Toybox[tostring(name)] = {id, icon};
+		if (id) then
+		  if (PlayerHasToy(id)) then
+		    S.Toybox[tostring(name)] = {id, icon};
+		  end
 		end
 	end
 
