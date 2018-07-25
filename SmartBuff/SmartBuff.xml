@@ -1676,7 +1676,7 @@
 			</EditBox>
 
 			<Button name="SmartBuff_BuffSetup_BuffIcon1">
-				<NormalTexture file=""/>
+				<NormalTexture file="Interface\\Icons\\INV_Misc_PocketWatch_01"/>
 				<Size>
 					<AbsDimension x="32" y="32"/>
 				</Size>
@@ -1699,7 +1699,7 @@
 			</Button>
 
 			<Button name="SmartBuff_BuffSetup_BuffIcon2">
-				<NormalTexture file=""/>
+				<NormalTexture file="Interface\\Icons\\INV_Misc_PocketWatch_01"/>
 				<Size>
 					<AbsDimension x="32" y="32"/>
 				</Size>

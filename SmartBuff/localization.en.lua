@@ -5,11 +5,10 @@
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhats new:|r\n\n"
   .."- Updated TOC\n\n"
-  .."- Added Demon Hunter class\n\n"
-  .."- Fixed LUA errors\n\n"
-  .."- This release will restore basic functionality, but unfortunately it does not contain all the new aura changes, sorry.\n\n"
-  .."\n- Due to I am not playing WoW atm, please report any missing auras, items, etc. and be patient, thanks!\n\n"
-  .."- Thanks to all who have helped me to keep it alive.\n\n"
+  .."- Fixed LUA and Texture errors\n\n"
+  .."- Re-added or corrected spells returning in Battle for Azeroth\n\n"
+  .."- Fixed ToyBox issues\n\n"
+  .."- Fixed issues with Druids shapeshifting\n\n"
   
   --[[
   .."- Thanks for donation:\n"

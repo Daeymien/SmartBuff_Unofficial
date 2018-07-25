@@ -40,7 +40,7 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v8.0e";
+SMARTBUFF_VERSION       = "v8.0f";
 SMARTBUFF_VERSIONNR     = 80000;
 SMARTBUFF_TITLE         = "SmartBuff";
 SMARTBUFF_SUBTITLE      = "Supports you in cast buffs";
@@ -450,7 +450,6 @@ function SMARTBUFF_OnEvent(self, event, ...)
     end
   elseif(event == "ADDON_LOADED" and arg1 == SMARTBUFF_TITLE) then
     isLoaded = true;
---    SMARTBUFF_FindItem("ScanBagsForSBInit");  
   end
     
   if (event == "SMARTBUFF_UPDATE" and isLoaded and isPlayer and not isInit and not InCombatLockdown()) then
@@ -539,7 +538,8 @@ function SMARTBUFF_OnEvent(self, event, ...)
     -- checks if aspect of cheetah or pack is active and cancel it if someone gets dazed
     if (sPlayerClass == "HUNTER" and O.AntiDaze and (arg1 == "player" or string.find(arg1, "^party") or string.find(arg1, "^raid") or string.find(arg1, "pet"))) then
       --SMARTBUFF_AddMsgD("Checking: " .. arg1);
-      if (SMARTBUFF_IsDebuffTexture(arg1, "Spell_Frost_Stun")) then
+	  local _, _, stuntex = GetSpellInfo(1604); --get Dazed icon
+      if (SMARTBUFF_IsDebuffTexture(arg1, stuntex)) then
         buff = nil;
         if (arg1 == "player" and SMARTBUFF_CheckBuff(arg1, SMARTBUFF_AOTC)) then
           buff = SMARTBUFF_AOTC;
@@ -2750,7 +2750,7 @@ function SMARTBUFF_IsDebuffTexture(unit, debufftex)
   local name, icon;
   -- name,rank,icon,count,type = UnitDebuff("unit", id or "name"[,"rank"])
   while (UnitDebuff(unit, i)) do
-    name, _, icon, _, _ = UnitDebuff(unit, i);
+    name, icon, _, _ = UnitDebuff(unit, i);
     --SMARTBUFF_AddMsgD(i .. ". " .. name .. ", " .. icon);  
     if (string.find(icon, debufftex)) then
       active = true;
