@@ -783,7 +783,7 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_BERSERKERRAGE, 0.165, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_SHIELDBLOCK, 0.1666, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_BATSTANCE, -1, SMARTBUFF_CONST_STANCE, nil, nil, nil, S.ChainWarriorStance},
-      {SMARTBUFF_DEFSTANCE, -1, SMARTBUFF_CONST_STANCE, nil, nil, nil, S.ChainWarriorStance},
+      {SMARTBUFF_DEFSTANCE, -1, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainWarriorStance},
       {SMARTBUFF_GLADSTANCE, -1, SMARTBUFF_CONST_STANCE, nil, nil, nil, S.ChainWarriorStance}
     };
   end
