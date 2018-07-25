@@ -307,13 +307,14 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_DRUID_TREE      = GetSpellInfo(33891); --"Incarnation: Tree of Life"
   SMARTBUFF_DRUID_TREANT    = GetSpellInfo(114282);--"Treant Form"
   SMARTBUFF_DRUID_MOONKIN   = GetSpellInfo(24858); --"Moonkin Form"
-  SMARTBUFF_DRUID_MKAURA    = GetSpellInfo(24907); --"Moonkin Aura"
+  --SMARTBUFF_DRUID_MKAURA    = GetSpellInfo(24907); --"Moonkin Aura"
   SMARTBUFF_DRUID_TRACK     = GetSpellInfo(5225);  --"Track Humanoids"
-  SMARTBUFF_MOTW            = GetSpellInfo(1126);  --"Mark of the Wild"
+  --SMARTBUFF_MOTW            = GetSpellInfo(1126);  --"Mark of the Wild"
   SMARTBUFF_BARKSKIN        = GetSpellInfo(22812); --"Barkskin"
   SMARTBUFF_TIGERSFURY      = GetSpellInfo(5217);  --"Tiger's Fury"
   SMARTBUFF_SAVAGEROAR      = GetSpellInfo(52610); --"Savage Roar"
   SMARTBUFF_CENARIONWARD    = GetSpellInfo(102351);--"Cenarion Ward"
+  SMARTBUFF_BEARFORM        = GetSpellInfo(5487);  --"Bear Form"
 
   -- Priest
   SMARTBUFF_PWF             = GetSpellInfo(21562); --"Power Word: Fortitude"
@@ -663,6 +664,8 @@ function SMARTBUFF_InitSpellList()
     SMARTBUFF_BUFFLIST = {
       {SMARTBUFF_DRUID_MOONKIN, -1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_DRUID_TREANT, -1, SMARTBUFF_CONST_SELF},
+      {SMARTBUFF_BEARFORM, -1, SMARTBUFF_CONST_SELF},
+      {SMARTBUFF_DRUID_CAT, -1, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_DRUID_TREE, 0.5, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_MOTW, 60, SMARTBUFF_CONST_GROUP, {30}, "WPET;DKPET"},
       {SMARTBUFF_CENARIONWARD, 0.5, SMARTBUFF_CONST_GROUP, {1}, "WARRIOR;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;DEATHKNIGHT;MONK;DEMONHUNTER"},

@@ -1555,7 +1555,8 @@ function SMARTBUFF_IsShapeshifted()
   elseif (sPlayerClass == "DRUID") then
     local i;
     for i = 1, GetNumShapeshiftForms(), 1 do
-      local icon, name, active, castable = GetShapeshiftFormInfo(i);
+      local icon, active, castable, spellId = GetShapeshiftFormInfo(i);
+	  local name = GetSpellInfo(spellId);
       if (active and castable and name ~= SMARTBUFF_DRUID_TREANT) then
         return true, name;
       end
