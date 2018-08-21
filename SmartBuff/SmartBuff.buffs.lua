@@ -1065,6 +1065,24 @@ function SMARTBUFF_InitSpellList()
   AddItem(153023, 224001,  60); -- Lightforged Augment Rune
   AddItem(129149, 193333,  60); -- Helheim Spirit Memory
   AddItem(122304, 138927,  10); -- Fandral's Seed Pouch
+  AddItem(160053, 270058,  60); --Battle-Scarred Augment Rune
+  AddItem(163795, 280308,  10); --Oomgut Ritual Drum
+  AddItem(163924, 280632,  30); --Whiskerwax Candle
+  AddItem(164375, 281303,  10); --Bad Mojo Banana
+  AddItem(164347, 281302,  10); --Magic Monkey Banana
+  AddItem(164373, 281298,  10); --Enchanted Soup Stone
+  AddItem(156871, 261981,  60); --Spitzy
+  AddItem(159753,  29366,   5); --Desert Flute
+  AddItem(163565, 279407,   5); --Vulpera Scrapper's Armor
+  AddItem(161342, 275089,  30); --Gem of Acquiescence
+  AddItem(163742, 279997,  60); --Heartsbane Grimoire
+  AddItem(159749, 277572,   5); --Haw'li's Hot & Spicy Chili
+  AddItem(163775, 280133,  10); --Molok Morion
+  AddItem(163750, 280121,  10); --Kovork Kostume
+  AddItem(163738, 279983,  30); --Syndicate Mask
+  AddItem(163436, 279977,  30); --Spectral Visage
+  AddItem(163713, 279934,  30); --Brazier Cap
+  AddItem(158149, 264091,  30); --Overtuned Corgi Goggles
   
   -- Potions
   SMARTBUFF_POTION = {
