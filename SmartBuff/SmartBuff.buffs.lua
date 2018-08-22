@@ -1083,6 +1083,7 @@ function SMARTBUFF_InitSpellList()
   AddItem(163436, 279977,  30); --Spectral Visage
   AddItem(163713, 279934,  30); --Brazier Cap
   AddItem(158149, 264091,  30); --Overtuned Corgi Goggles
+  AddItem(118938, 176180,  10); --Manastorm's Duplicator
   
   -- Potions
   SMARTBUFF_POTION = {
