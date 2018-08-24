@@ -4,11 +4,8 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhats new:|r\n\n"
-  .."- Updated TOC\n\n"
-  .."- Fixed LUA and Texture errors\n\n"
-  .."- Re-added or corrected spells returning in Battle for Azeroth\n\n"
-  .."- Fixed ToyBox issues\n\n"
-  .."- Fixed issues with Druids shapeshifting\n\n"
+  .."- Added many Legion and BfA toys\n\n"
+  .."- Fixed issued with scroll frame and massive amoutn of buffs nwo existing.\n\n"
   
   --[[
   .."- Thanks for donation:\n"
