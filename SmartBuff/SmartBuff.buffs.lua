@@ -1055,35 +1055,89 @@ function SMARTBUFF_InitSpellList()
   };
   
   --      ItemId, SpellId, Duration [min]
-  AddItem(102463, 148429,  10); -- Fire-Watcher's Oath
-  AddItem(116115, 170869,  60); -- Blazing Wings
-  AddItem( 43499,  58501,  10); -- Iron Boot Flask
-  AddItem( 54653,  75532,  30); -- Darkspear Pride
-  AddItem( 54651,  75531,  30); -- Gnomeregan Pride
-  AddItem(128807, 192225,  60); -- Coin of Many Faces
-  AddItem( 68806,  96312,  30); -- Kalytha's Haunted Locket
   AddItem(153023, 224001,  60); -- Lightforged Augment Rune
-  AddItem(129149, 193333,  60); -- Helheim Spirit Memory
-  AddItem(122304, 138927,  10); -- Fandral's Seed Pouch
   AddItem(160053, 270058,  60); --Battle-Scarred Augment Rune
-  AddItem(163795, 280308,  10); --Oomgut Ritual Drum
-  AddItem(163924, 280632,  30); --Whiskerwax Candle
   AddItem(164375, 281303,  10); --Bad Mojo Banana
-  AddItem(164347, 281302,  10); --Magic Monkey Banana
-  AddItem(164373, 281298,  10); --Enchanted Soup Stone
-  AddItem(156871, 261981,  60); --Spitzy
-  AddItem(159753,  29366,   5); --Desert Flute
-  AddItem(163565, 279407,   5); --Vulpera Scrapper's Armor
-  AddItem(161342, 275089,  30); --Gem of Acquiescence
-  AddItem(163742, 279997,  60); --Heartsbane Grimoire
-  AddItem(159749, 277572,   5); --Haw'li's Hot & Spicy Chili
-  AddItem(163775, 280133,  10); --Molok Morion
-  AddItem(163750, 280121,  10); --Kovork Kostume
-  AddItem(163738, 279983,  30); --Syndicate Mask
-  AddItem(163436, 279977,  30); --Spectral Visage
+  AddItem(129165, 193345,  10); --Barnacle-Encrusted Gem
+  AddItem(116115, 170869,  60); -- Blazing Wings
+  AddItem(133997, 203533,   0); --Black Ice
   AddItem(163713, 279934,  30); --Brazier Cap
-  AddItem(158149, 264091,  30); --Overtuned Corgi Goggles
+  AddItem(128310, 189363,  10); --Burning Blade
+  AddItem(116440, 171554,  20); --Burning Defender's Medallion
+  AddItem(128807, 192225,  60); -- Coin of Many Faces
+  AddItem(138878, 217668,   5); --Copy of Daglop's Contract
+  AddItem(143662, 232613,  60); --Crate of Bobbers: Pepe
+  AddItem(142529, 231319,  60); --Crate of Bobbers: Cat Head
+  AddItem(142530, 231338,  60); --Crate of Bobbers: Tugboat
+  AddItem(142528, 231291,  60); --Crate of Bobbers: Can of Worms
+  AddItem(142532, 231349,  60); --Crate of Bobbers: Murloc Head
+  AddItem(147308, 240800,  60); --Crate of Bobbers: Enchanted Bobber
+  AddItem(142531, 231341,  60); --Crate of Bobbers: Squeaky Duck
+  AddItem(147312, 240801,  60); --Crate of Bobbers: Demon Noggin
+  AddItem(147307, 240803,  60); --Crate of Bobbers: Carved Wooden Helm
+  AddItem(147309, 240806,  60); --Crate of Bobbers: Face of the Forest
+  AddItem(147310, 240802,  60); --Crate of Bobbers: Floating Totem
+  AddItem(147311, 240804,  60); --Crate of Bobbers: Replica Gondola
+  AddItem(122117, 179872,  15); --Cursed Feather of Ikzan
+  AddItem( 54653,  75532,  30); -- Darkspear Pride
+  AddItem(108743, 160688,  10); --Deceptia's Smoldering Boots
+  AddItem(159753, 279366,   5); --Desert Flute
+  AddItem(164373, 281298,  10); --Enchanted Soup Stone
+  AddItem(140780, 224992,   5); --Fal'dorei Egg
+  AddItem(122304, 138927,  10); -- Fandral's Seed Pouch
+  AddItem(102463, 148429,  10); -- Fire-Watcher's Oath
+  AddItem(128471, 190655,  30); --Frostwolf Grunt's Battlegear
+  AddItem(128462, 190653,  30); --Karabor Councilor's Attire
+  AddItem(161342, 275089,  30); --Gem of Acquiescence
+  AddItem(127659, 188228,  60); --Ghostly Iron Buccaneer's Hat
+  AddItem( 54651,  75531,  30); -- Gnomeregan Pride
+  AddItem(118716, 175832,   5); --Goren Garb
+  AddItem(138900, 217708,  10); --Gravil Goldbraid's Famous Sausage Hat
+  AddItem(159749, 277572,   5); --Haw'li's Hot & Spicy Chili
+  AddItem(163742, 279997,  60); --Heartsbane Grimoire
+  AddItem(129149, 193333,  60); -- Helheim Spirit Memory
+  AddItem(140325, 223446,  10); --Home Made Party Mask
+  AddItem(136855, 210642,0.25); --Hunter's Call
+  AddItem( 43499,  58501,  10); -- Iron Boot Flask
+  AddItem(118244, 173956,  60); --Iron Buccaneer's Hat
+  AddItem(127668, 187174,   5); --Jewel of Hellfire
+  AddItem( 26571, 127261,  10); --Kang's Bindstone
+  AddItem( 68806,  96312,  30); -- Kalytha's Haunted Locket
+  AddItem(163750, 280121,  10); --Kovork Kostume
+  AddItem(164347, 281302,  10); --Magic Monkey Banana
   AddItem(118938, 176180,  10); --Manastorm's Duplicator
+  AddItem(163775, 280133,  10); --Molok Morion
+  AddItem(101571, 144787,   0); --Moonfang Shroud
+  AddItem(105898, 145255,  10); --Moonfang's Paw
+  AddItem( 52201,  73320,  10); --Muradin's Favor
+  AddItem(138873, 217597,   5); --Mystical Frosh Hat
+  AddItem(163795, 280308,  10); --Oomgut Ritual Drum
+  AddItem(  1973,  16739,   5); --Orb of Deception
+  AddItem(158149, 264091,  30); --Overtuned Corgi Goggles
+  AddItem(130158, 195949,   5); --Path of Elothir
+  AddItem(127864, 188172,  60); --Personal Spotlight
+  AddItem(127394, 186842,   5); --Podling Camouflage
+  AddItem(108739, 162402,   5); --Pretty Draenor Pearl
+  AddItem(129093, 129999,  10); --Ravenbear Disguise
+  AddItem(153179, 254485,   5); --Blue Conservatory Scroll
+  AddItem(153180, 254486,   5); --Yellow Conservatory Scroll
+  AddItem(153181, 254487,   5); --Red Conservatory Scroll
+  AddItem(104294, 148529,  15); --Rime of the Time-Lost Mariner
+  AddItem(119215, 176898,  10); --Robo-Gnomebobulator
+  AddItem(119134, 176569,  30); --Sargerei Disguise
+  AddItem(129055,  62089,  60); --Shoe Shine Kit
+  AddItem(163436, 279977,  30); --Spectral Visage
+  AddItem(156871, 261981,  60); --Spitzy
+  AddItem( 66888,   6405,   3); --Stave of Fur and Claw
+  AddItem(111476, 169291,   5); --Stolen Breath
+  AddItem(140160, 222630,  10); --Stormforged Vrykul Horn
+  AddItem(163738, 279983,  30); --Syndicate Mask
+  AddItem(130147, 195509,   5); --Thistleleaf Branch
+  AddItem(113375, 166592,   5); --Vindicator's Armor Polish Kit
+  AddItem(163565, 279407,   5); --Vulpera Scrapper's Armor
+  AddItem(163924, 280632,  30); --Whiskerwax Candle
+  AddItem( 97919, 141917,   3); --Whole-Body Shrinka'
+  
   
   -- Potions
   SMARTBUFF_POTION = {
@@ -1150,4 +1204,7 @@ function SMARTBUFF_InitSpellList()
   }
   
   SMARTBUFF_AddMsgD("Spell list initialized");
+
+--  LoadToys();
+
 end
