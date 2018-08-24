@@ -2527,6 +2527,11 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
           buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
             timeleft = timeleft - time;
+  if (timeleft > 0) then
+	timeleft = timeleft;
+  else
+    timeleft = time;
+  end
             SMARTBUFF_AddMsgD("Linked buff found: "..buff..", "..timeleft..", "..icon);
             return nil, n, defBuff, timeleft, count;
           end
@@ -2597,6 +2602,11 @@ function SMARTBUFF_CheckBuffLink(unit, defBuff, buffT, buffL)
           buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
             timeleft = timeleft - time;
+  if (timeleft > 0) then
+	timeleft = timeleft;
+  else
+    timeleft = time;
+  end
             SMARTBUFF_AddMsgD("Linked buff found: "..buff..", "..timeleft..", "..icon);
             return nil, n, defBuff, timeleft, count;
           end
@@ -2658,6 +2668,11 @@ function SMARTBUFF_CheckBuff(unit, buffName, isMine)
     SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
     if (buff == buffName) then
       timeleft = timeleft - time;
+  if (timeleft > 0) then
+	timeleft = timeleft;
+  else
+    timeleft = time;
+  end
       if (isMine and caster) then
         if (SMARTBUFF_IsPlayer(caster)) then
           return true, timeleft, caster;
