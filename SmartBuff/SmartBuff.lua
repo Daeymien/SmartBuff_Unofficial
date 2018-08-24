@@ -1817,7 +1817,7 @@ function SMARTBUFF_BuffUnit(unit, subgroup, mode, spell)
           cds = 0;
           if (cBuff.IDS) then
             cds, cd = GetSpellCooldown(buffnS);
-            cd = (cds + cd) - time;
+            cd = (cds + cd) - GetTime();
             if (cd < 0) then
               cd = 0;
             end
@@ -1927,7 +1927,7 @@ function SMARTBUFF_BuffUnit(unit, subgroup, mode, spell)
                       buff = buffnS;
                       if (cBuff.Type == SMARTBUFF_CONST_ITEMGROUP or cBuff.Type == SMARTBUFF_CONST_SCROLL) then
                         cds, cd = GetItemCooldown(iid);
-                        cd = (cds + cd) - time;
+                        cd = (cds + cd) - GetTime();
                         --SMARTBUFF_AddMsgD(cr.." "..buffnS.." found, cd = "..cd);
                         if (cd > 0) then
                           buff = nil;
@@ -2526,7 +2526,7 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
           SMARTBUFF_AddMsgD("Check linked buff ("..uname.."): "..v);
           buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
-            timeleft = timeleft - time;
+            timeleft = timeleft - GetTime();
   if (timeleft > 0) then
 	timeleft = timeleft;
   else
@@ -2569,7 +2569,7 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
     SMARTBUFF_AddMsgD("Check default buff ("..uname.."): "..defBuff);
     buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, defBuff);
     if (buff) then
-      timeleft = timeleft - time;
+      timeleft = timeleft - GetTime();
   if (timeleft > 0) then
 	timeleft = timeleft;
   else
@@ -2601,7 +2601,7 @@ function SMARTBUFF_CheckBuffLink(unit, defBuff, buffT, buffL)
           SMARTBUFF_AddMsgD("Check linked buff ("..uname.."): "..v);
           buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, v);
           if (buff) then
-            timeleft = timeleft - time;
+            timeleft = timeleft - GetTime();
   if (timeleft > 0) then
 	timeleft = timeleft;
   else
@@ -2667,7 +2667,7 @@ function SMARTBUFF_CheckBuff(unit, buffName, isMine)
   if (buff) then
     SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
     if (buff == buffName) then
-      timeleft = timeleft - time;
+      timeleft = timeleft - GetTime();
   if (timeleft > 0) then
 	timeleft = timeleft;
   else
