@@ -40,7 +40,7 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v8.0f";
+SMARTBUFF_VERSION       = "v8.0f1";
 SMARTBUFF_VERSIONNR     = 80000;
 SMARTBUFF_TITLE         = "SmartBuff";
 SMARTBUFF_SUBTITLE      = "Supports you in cast buffs";
@@ -62,7 +62,7 @@ local GlobalCd = 1.5;
 local maxSkipCoolDown = 3;
 local maxRaid = 40;
 local maxBuffs = 40;
-local maxScrollButtons = 50;
+local maxScrollButtons = 23;
 local numBuffs = 0;
 
 local isLoaded = false;
@@ -1053,7 +1053,7 @@ function SMARTBUFF_SetBuffs()
 end
 
 function SMARTBUFF_SetBuff(buff, i, ia)
-  if (buff == nil or buff[1] == nil or i > maxScrollButtons) then return i; end  
+  if (buff == nil or buff[1] == nil) then return i; end  
   
   cBuffs[i] = nil;
   cBuffs[i] = { }; 
@@ -2565,6 +2565,11 @@ function SMARTBUFF_CheckUnitBuffs(unit, buffN, buffT, buffL, buffC)
     buff, icon, count, _, duration, timeleft, caster = UnitBuffByBuffName(unit, defBuff);
     if (buff) then
       timeleft = timeleft - time;
+  if (timeleft > 0) then
+	timeleft = timeleft;
+  else
+    timeleft = time;
+  end
       if (SMARTBUFF_IsPlayer(caster)) then
         SMARTBUFF_UpdateBuffDuration(defBuff, duration);
       end
@@ -2652,7 +2657,7 @@ function SMARTBUFF_CheckBuff(unit, buffName, isMine)
   if (buff) then
     SMARTBUFF_AddMsgD(UnitName(unit).." buff found: "..buff, 0, 1, 0.5);
     if (buff == buffName) then
-      timeleft = timeleft - GetTime();
+      timeleft = timeleft - time;
       if (isMine and caster) then
         if (SMARTBUFF_IsPlayer(caster)) then
           return true, timeleft, caster;
@@ -4401,6 +4406,7 @@ function SMARTBUFF_MinimapButton_OnUpdate(self, move)
   end
 
   local xpos, ypos;
+self:ClearAllPoints()
   if (move or O.MMCPosX == nil) then
     local pos, r
     local xmin, ymin = Minimap:GetLeft(), Minimap:GetBottom();
@@ -4520,7 +4526,7 @@ local function OnScroll(self, cData, sBtnName)
     numToDisplay = maxScrollButtons;
   end
   
-  FauxScrollFrame_Update(self, num, numToDisplay, ScrLineHeight);
+  FauxScrollFrame_Update(self, num, floor(numToDisplay/3+0.5), ScrLineHeight);
   local t = B[CS()][CT()];
   for i = 1, maxScrollButtons, 1 do
     n = i + FauxScrollFrame_GetOffset(self);
