@@ -1,5 +1,5 @@
 # SmartBuff_Unofficial
-Unofficial version for WoW 8.0.1 BfA Pre-Patch
+Unofficial version for WoW 8.0.1
   
 Created by Aeldra (EU-Proudmoore)  
 Updated by Zwixx  
