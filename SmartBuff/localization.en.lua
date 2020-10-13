@@ -3,9 +3,9 @@
 -------------------------------------------------------------------------------
 
 -- Whats new info
-SMARTBUFF_WHATSNEW = "|cffffffffWhats new:|r\n\n"
-  .."- Added many Legion and BfA toys\n\n"
-  .."- Fixed issued with scroll frame and massive amoutn of buffs nwo existing.\n\n"
+SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
+  .."- Bump for Shadowlands compatibility\n\n"
+  .."- Added a couple of toys and an Augment Rune.\n\n"
   
   --[[
   .."- Thanks for donation:\n"

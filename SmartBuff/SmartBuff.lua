@@ -40,8 +40,8 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v8.0f1";
-SMARTBUFF_VERSIONNR     = 80000;
+SMARTBUFF_VERSION       = "v9.0a";
+SMARTBUFF_VERSIONNR     = 90000;
 SMARTBUFF_TITLE         = "SmartBuff";
 SMARTBUFF_SUBTITLE      = "Supports you in cast buffs";
 SMARTBUFF_DESC          = "Cast the most important buffs on you or party/raid members/pets";
@@ -575,7 +575,7 @@ function SMARTBUFF_OnEvent(self, event, ...)
       if (UnitName(currentUnit) ~= sPlayerName and O.BlacklistTimer > 0) then
         cBlacklist[currentUnit] = GetTime();
         if (currentUnit and UnitName(currentUnit)) then
-          SMARTBUFF_AddMsgWarn(UnitName(currentUnit).." ("..currentUnit..") blacklisted ("..O.BlacklistTimer.."sec)");
+--          SMARTBUFF_AddMsgWarn(UnitName(currentUnit).." ("..currentUnit..") blacklisted ("..O.BlacklistTimer.."sec)");
         end
       end
     end
@@ -3948,7 +3948,7 @@ function SMARTBUFF_Splash_Show()
   SMARTBUFF_Splash_ChangeFont(1);
   -- "Interface/DialogFrame/UI-DialogBox-Background"
   -- "Interface/Tooltips/UI-Tooltip-Background"
-  SmartBuffSplashFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background"});
+  -- SmartBuffSplashFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background"});
   SmartBuffSplashFrame:EnableMouse(true);
   SmartBuffSplashFrame:Show();
   SmartBuffSplashFrame:SetTimeVisible(60);
@@ -3959,7 +3959,7 @@ function SMARTBUFF_Splash_Hide()
   if (not isInit) then return; end 
   SMARTBUFF_Splash_Clear();
   SMARTBUFF_Splash_ChangePos();
-  SmartBuffSplashFrame:SetBackdrop(nil);
+--  SmartBuffSplashFrame:SetBackdrop(nil);
   SmartBuffSplashFrame:EnableMouse(false);
   SmartBuffSplashFrame:SetFadeDuration(O.SplashDuration);
   SmartBuffSplashFrame:SetTimeVisible(O.SplashDuration);
@@ -4448,6 +4448,7 @@ self:ClearAllPoints()
     ypos = O.MMCPosY;
     --SMARTBUFF_AddMsgD("Load minimap button position");
   end
+self:ClearAllPoints()
   self:SetPoint("TOPLEFT", "Minimap", "TOPLEFT", xpos, ypos);
   --SMARTBUFF_AddMsgD("x = " .. O.MMCPosX .. ", y = " .. O.MMCPosY);
   --SmartBuff_MiniMapButton:SetUserPlaced(true);

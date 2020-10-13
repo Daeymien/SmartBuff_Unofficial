@@ -163,6 +163,8 @@ aeldra@sonnenkinder.org
 Changes: 
 Rev     Date        Description
 ------  ----------  -----------------------
+9.0a	2020-10-13  Fix frame backdrops
+
 9.0	2020-10-13  Initial bumps for Shadowlands
 
 8.0f1	2018-08-23  Added many Legion and BfA toys

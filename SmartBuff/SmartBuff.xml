@@ -12,6 +12,19 @@
 	<Frame name="SmartBuffFrame">
 		<Scripts>
 			<OnLoad>
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+--	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
 				SMARTBUFF_OnLoad(self);
 			</OnLoad>
 			<OnEvent>
@@ -1607,6 +1620,19 @@
 
 		<Scripts>
 			<OnLoad>
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+--	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
 				SMARTBUFF_Options_OnLoad(self);
 			</OnLoad>
 			<OnShow>
@@ -1651,7 +1677,7 @@
 				<AbsValue val="32"/>
 			</EdgeSize>
 		</Backdrop>		
-
+		
 		<Frames>
 
 			<EditBox name="SmartBuff_BuffSetup_BuffText" letters="200" multiLine="true" autoFocus="false">
@@ -2866,6 +2892,23 @@
 			</Slider>	    
 
 		</Frames>
+		<Scripts>
+			<OnLoad>
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+--	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
+			</OnLoad>
+		</Scripts>
 	</Frame>
 
 	<Frame name="SmartBuff_PlayerSetup" toplevel="true" frameStrata="DIALOG" parent="SmartBuffOptionsFrame" hidden="true" enableMouse="true">
@@ -3054,7 +3097,22 @@
 			<OnHide>
 				SmartBuff_PlayerSetup_OnHide();
 			</OnHide>
-		</Scripts>	
+			<OnLoad>
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+--	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
+			</OnLoad>
+		</Scripts>
 	</Frame>
 
 
@@ -3099,6 +3157,7 @@
 				<FontString inherits="GameFontNormalSmall" justifyH="LEFT"/>
 				<Scripts>
 					<OnLoad>
+
 						self:SetAutoFocus(false);
 						self:SetText("");
 						self:EnableMouse(false);
@@ -3112,6 +3171,19 @@
 		<Scripts>	
 			<OnLoad>
 				self:SetHeight(SmartBuffOptionsFrame:GetHeight());
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+--	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
 			</OnLoad>
 			<OnShow>
 			</OnShow>

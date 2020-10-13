@@ -1,6 +1,6 @@
 ## Interface: 90001
 ## Title: Smart|cffffffffBuff|r by |cff00ff00Aeldra|r [Unofficial fixes by Daeymien]
-## Version: 9.0
+## Version: 9.0a
 ## Author: |cff20d2ffAeldra|r (EU-Proudmoore) [Unofficial fixes by Daeymien]
 ## Notes: Cast the most important buffs on you or party/raid members/pets. Use  /sbm  for options menu.
 ## Notes-deDE: Castet die wichtigsten Buffs auf dich selbst, Gruppe/Raid Mitglieder/Pets. Benutze  /sbm  um das Menü zu öffnen
