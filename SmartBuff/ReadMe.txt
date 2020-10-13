@@ -163,10 +163,12 @@ aeldra@sonnenkinder.org
 Changes: 
 Rev     Date        Description
 ------  ----------  -----------------------
-8.0f1	2018-08-23	Added many LEgionand BfA toys
+9.0	2020-10-13  Initial bumps for Shadowlands
+
+8.0f1	2018-08-23  Added many Legion and BfA toys
 					Fixed issue with scroll frame when many buffs/toys were available
 
-8.0f	2018-07-25	Fixes for Battle for Azeroth Pre-Patch
+8.0f	2018-07-25  Fixes for Battle for Azeroth Pre-Patch
 					Updated buffs
 					Fixed ToyBox
 					Fixed issues with Druid shapeshifting
