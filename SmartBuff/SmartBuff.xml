@@ -1630,7 +1630,7 @@ self:SetBackdrop({
 --	tile = true,
 --	tileSize = 32,
 --	edgeSize = 32,
---	insets = {left = 12, right = 12, top = 12, bottom = 11},
+	insets = {left = 12, right = 12, top = 12, bottom = 11},
 })
 ----------------------------------
 				SMARTBUFF_Options_OnLoad(self);
@@ -2904,7 +2904,7 @@ self:SetBackdrop({
 --	tile = true,
 --	tileSize = 32,
 --	edgeSize = 32,
---	insets = {left = 12, right = 12, top = 12, bottom = 11},
+	insets = {left = 12, right = 12, top = 12, bottom = 11},
 })
 ----------------------------------
 			</OnLoad>
@@ -3108,7 +3108,7 @@ self:SetBackdrop({
 --	tile = true,
 --	tileSize = 32,
 --	edgeSize = 32,
---	insets = {left = 12, right = 12, top = 12, bottom = 11},
+	insets = {left = 12, right = 12, top = 12, bottom = 11},
 })
 ----------------------------------
 			</OnLoad>
@@ -3181,7 +3181,7 @@ self:SetBackdrop({
 --	tile = true,
 --	tileSize = 32,
 --	edgeSize = 32,
---	insets = {left = 12, right = 12, top = 12, bottom = 11},
+	insets = {left = 12, right = 12, top = 12, bottom = 11},
 })
 ----------------------------------
 			</OnLoad>
