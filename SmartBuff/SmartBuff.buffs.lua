@@ -1055,6 +1055,7 @@ function SMARTBUFF_InitSpellList()
   };
   
   --      ItemId, SpellId, Duration [min]
+  AddItem(174906, 270058,  60); -- Lightning-Forged Augment Rune
   AddItem(153023, 224001,  60); -- Lightforged Augment Rune
   AddItem(160053, 270058,  60); --Battle-Scarred Augment Rune
   AddItem(164375, 281303,  10); --Bad Mojo Banana
@@ -1081,6 +1082,7 @@ function SMARTBUFF_InitSpellList()
   AddItem(122117, 179872,  15); --Cursed Feather of Ikzan
   AddItem( 54653,  75532,  30); -- Darkspear Pride
   AddItem(108743, 160688,  10); --Deceptia's Smoldering Boots
+  AddItem(129149, 193333,  30); --Death's Door Charm
   AddItem(159753, 279366,   5); --Desert Flute
   AddItem(164373, 281298,  10); --Enchanted Soup Stone
   AddItem(140780, 224992,   5); --Fal'dorei Egg
@@ -1100,6 +1102,7 @@ function SMARTBUFF_InitSpellList()
   AddItem(136855, 210642,0.25); --Hunter's Call
   AddItem( 43499,  58501,  10); -- Iron Boot Flask
   AddItem(118244, 173956,  60); --Iron Buccaneer's Hat
+  AddItem(170380, 304369, 120); --Jar of Sunwarmed Sand
   AddItem(127668, 187174,   5); --Jewel of Hellfire
   AddItem( 26571, 127261,  10); --Kang's Bindstone
   AddItem( 68806,  96312,  30); -- Kalytha's Haunted Locket
