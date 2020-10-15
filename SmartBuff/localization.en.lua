@@ -4,8 +4,8 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."- Bump for Shadowlands compatibility\n\n"
-  .."- Added a couple of toys and an Augment Rune.\n\n"
+  .."- Added back Instant Poison for Outlaw Rogues\n\n"
+  .."- Added back Windfury and Flametongue Weapons for Shaman\n\n"
   
   --[[
   .."- Thanks for donation:\n"
