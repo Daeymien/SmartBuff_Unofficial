@@ -416,12 +416,14 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_ASCENDANCE_ENH      = GetSpellInfo(114051); --"Ascendance (Enhancement)"
   SMARTBUFF_ASCENDANCE_RES      = GetSpellInfo(114052); --"Ascendance (Restoration)"
   --SMARTBUFF_GRACEOFAIR      = GetSpellInfo(116956); --"Grace of Air" (P)
+  SMARTBUFF_WINDFURYW       = GetSpellInfo(33757); --"Windfury Weapon"
+  SMARTBUFF_FLAMETONGUEW    = GetSpellInfo(318038); --"Flametongue Weapon"
   -- Shaman buff links
   S.ChainShamanShield = { SMARTBUFF_LIGHTNINGSHIELD, SMARTBUFF_WATERSHIELD, SMARTBUFF_EARTHSHIELD };
   
   -- Warrior
   SMARTBUFF_BATTLESHOUT     = GetSpellInfo(6673);   --"Battle Shout"
-  SMARTBUFF_COMMANDINGSHOUT = GetSpellInfo(97462);    --"Reallying Cry"
+  --SMARTBUFF_COMMANDINGSHOUT = GetSpellInfo(97462);    --"Reallying Cry"
   SMARTBUFF_BERSERKERRAGE   = GetSpellInfo(18499);  --"Berserker Rage"
   --SMARTBUFF_BATSTANCE       = GetSpellInfo(2457);   --"Battle Stance"
   SMARTBUFF_DEFSTANCE       = GetSpellInfo(197690);     --"Defensive Stance"
@@ -444,7 +446,7 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_CRIPPLINGPOISON   = GetSpellInfo(3408);  --"Crippling Poison"
   SMARTBUFF_DEADLYPOISON      = GetSpellInfo(2823);  --"Deadly Poison"
   SMARTBUFF_LEECHINGPOISON    = GetSpellInfo(108211);--"Leeching Poison"
---  SMARTBUFF_INSTANTPOISON     = GetSpellInfo(157607);--"Instant Poison"
+  SMARTBUFF_INSTANTPOISON     = GetSpellInfo(315584);--"Instant Poison"
 --  SMARTBUFF_AGONIZINGPOISON   = GetSpellInfo(200802);--"Agonizing Poison"
   -- Rogue buff links
   S.ChainRoguePoisonsLethal    = { SMARTBUFF_DEADLYPOISON, SMARTBUFF_WOUNDPOISON, SMARTBUFF_INSTANTPOISON, SMARTBUFF_AGONIZINGPOISON };
@@ -777,6 +779,8 @@ function SMARTBUFF_InitSpellList()
     SMARTBUFF_BUFFLIST = {
       {SMARTBUFF_LIGHTNINGSHIELD, 60, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainShamanShield},
       {SMARTBUFF_WATERSHIELD, 60, SMARTBUFF_CONST_SELF, nil, nil, nil, S.ChainShamanShield},
+      {SMARTBUFF_WINDFURYW, 60, SMARTBUFF_CONST_WEAPON},
+      {SMARTBUFF_FLAMETONGUEW, 60, SMARTBUFF_CONST_WEAPON},
       {SMARTBUFF_EARTHSHIELD, 10, SMARTBUFF_CONST_GROUP, {50,60,70,75,80}, "WARRIOR;DEATHKNIGHT;DRUID;SHAMAN;HUNTER;ROGUE;MAGE;PRIEST;PALADIN;WARLOCK;MONK;DEMONHUNTER;HPET;WPET;DKPET"},
       {SMARTBUFF_UNLEASHFLAME, 0.333, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_ASCENDANCE_ELE, 0.25, SMARTBUFF_CONST_SELF},
@@ -810,6 +814,7 @@ function SMARTBUFF_InitSpellList()
       {SMARTBUFF_HUNGERFORBLOOD, 0.5, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_RECUPERATE, 0.5, SMARTBUFF_CONST_SELF},
       {SMARTBUFF_EVASION, 0.2, SMARTBUFF_CONST_SELF},
+      {SMARTBUFF_INSTANTPOISON, 60, SMARTBUFF_CONST_SELF, nil, S.CheckFishingPole, nil, S.ChainRoguePoisonsLethal},
       {SMARTBUFF_DEADLYPOISON, 60, SMARTBUFF_CONST_SELF, nil, S.CheckFishingPole, nil, S.ChainRoguePoisonsLethal},
       {SMARTBUFF_WOUNDPOISON, 60, SMARTBUFF_CONST_SELF, nil, S.CheckFishingPole, nil, S.ChainRoguePoisonsLethal},
       {SMARTBUFF_AGONIZINGPOISON, 60, SMARTBUFF_CONST_SELF, nil, S.CheckFishingPole, nil, S.ChainRoguePoisonsLethal},

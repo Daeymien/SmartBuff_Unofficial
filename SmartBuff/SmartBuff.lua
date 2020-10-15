@@ -1945,7 +1945,7 @@ function SMARTBUFF_BuffUnit(unit, subgroup, mode, spell)
               -- Weapon buff ------------------------------------------------------------------------
               elseif (cBuff.Type == SMARTBUFF_CONST_WEAPON or cBuff.Type == SMARTBUFF_CONST_INV) then                                
                 --SMARTBUFF_AddMsgD("Check weapon Buff");
-                local bMh, tMh, cMh, bOh, tOh, cOh = GetWeaponEnchantInfo();                
+                local bMh, tMh, cMh, _, bOh, tOh, cOh = GetWeaponEnchantInfo();
                 
                 if (bs.MH) then
                   iSlot = 16;
