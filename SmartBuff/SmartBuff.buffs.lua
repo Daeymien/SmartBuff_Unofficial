@@ -237,6 +237,11 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_MiscItem16          = GetItemInfo(122298); --"Bodyguard Miniaturization Device"
   SMARTBUFF_MiscItem17          = GetItemInfo(147707); --"Repurposed Fel Focuser"
   
+  SMARTBUFF_FLASKTBC1           = GetItemInfo(22854);  --"Flask of Relentless Assault"
+  SMARTBUFF_FLASKTBC2           = GetItemInfo(22866);  --"Flask of Pure Death"
+  SMARTBUFF_FLASKTBC3           = GetItemInfo(22851);  --"Flask of Fortification"
+  SMARTBUFF_FLASKTBC4           = GetItemInfo(22861);  --"Flask of Blinding Light"
+  SMARTBUFF_FLASKTBC5           = GetItemInfo(22853);  --"Flask of Mighty Versatility"
   SMARTBUFF_FLASK1              = GetItemInfo(46377);  --"Flask of Endless Rage"
   SMARTBUFF_FLASK2              = GetItemInfo(46376);  --"Flask of the Frost Wyrm"
   SMARTBUFF_FLASK3              = GetItemInfo(46379);  --"Flask of Stoneblood"
@@ -266,6 +271,23 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_FLASKLEG3           = GetItemInfo(127847); --"Flask of the Whispered Pact"
   SMARTBUFF_FLASKLEG4           = GetItemInfo(127848); --"Flask of the Seventh Demon"
 
+  SMARTBUFF_ELIXIRTBC1          = GetItemInfo(22831);  --"Elixir of Major Agility"
+  SMARTBUFF_ELIXIRTBC2          = GetItemInfo(28104);  --"Elixir of Mastery"
+  SMARTBUFF_ELIXIRTBC3          = GetItemInfo(22825);  --"Elixir of Healing Power"
+  SMARTBUFF_ELIXIRTBC4          = GetItemInfo(22834);  --"Elixir of Major Defense"
+  SMARTBUFF_ELIXIRTBC5          = GetItemInfo(22824);  --"Elixir of Major Strangth"
+  SMARTBUFF_ELIXIRTBC6          = GetItemInfo(32062);  --"Elixir of Major Fortitude"
+  SMARTBUFF_ELIXIRTBC7          = GetItemInfo(22840);  --"Elixir of Major Mageblood"
+  SMARTBUFF_ELIXIRTBC8          = GetItemInfo(32067);  --"Elixir of Draenic Wisdom"
+  SMARTBUFF_ELIXIRTBC9          = GetItemInfo(28103);  --"Adept's Elixir"
+  SMARTBUFF_ELIXIRTBC10         = GetItemInfo(22848);  --"Elixir of Empowerment"
+  SMARTBUFF_ELIXIRTBC11         = GetItemInfo(28102);  --"Onslaught Elixir"
+  SMARTBUFF_ELIXIRTBC12         = GetItemInfo(22835);  --"Elixir of Major Shadow Power"
+  SMARTBUFF_ELIXIRTBC13         = GetItemInfo(32068);  --"Elixir of Ironskin"
+  SMARTBUFF_ELIXIRTBC14         = GetItemInfo(32063);  --"Earthen Elixir"
+  SMARTBUFF_ELIXIRTBC15         = GetItemInfo(22827);  --"Elixir of Major Frost Power"
+  SMARTBUFF_ELIXIRTBC16         = GetItemInfo(31679);  --"Fel Strength Elixir"
+  SMARTBUFF_ELIXIRTBC17         = GetItemInfo(22833);  --"Elixir of Major Firepower"
   SMARTBUFF_ELIXIR1             = GetItemInfo(39666);  --"Elixir of Mighty Agility"
   SMARTBUFF_ELIXIR2             = GetItemInfo(44332);  --"Elixir of Mighty Thoughts"
   SMARTBUFF_ELIXIR3             = GetItemInfo(40078);  --"Elixir of Mighty Fortitude"
@@ -407,7 +429,7 @@ function SMARTBUFF_InitSpellIDs()
   
   -- Shaman
   SMARTBUFF_LIGHTNINGSHIELD = GetSpellInfo(192106); --"Lightning Shield"
- -- SMARTBUFF_WATERSHIELD     = GetSpellInfo(52127);  --"Water Shield"
+  SMARTBUFF_WATERSHIELD     = GetSpellInfo(52127);  --"Water Shield"
   SMARTBUFF_EARTHSHIELD     = GetSpellInfo(974);    --"Earth Shield"
   SMARTBUFF_WATERWALKING    = GetSpellInfo(546);    --"Water Walking"
   SMARTBUFF_EMASTERY        = GetSpellInfo(16166);  --"Elemental Mastery"
@@ -562,6 +584,11 @@ function SMARTBUFF_InitSpellIDs()
   S.LinkAugment             = { SMARTBUFF_BMiscItem14, SMARTBUFF_BMiscItem14_1, SMARTBUFF_BMiscItem14_2, SMARTBUFF_BMiscItem14_3 };
   
   -- Flasks & Elixirs
+  SMARTBUFF_BFLASKTBC1      = GetSpellInfo(28520);  --"Flask of Relentless Assault"
+  SMARTBUFF_BFLASKTBC2      = GetSpellInfo(28540);  --"Flask of Pure Death"
+  SMARTBUFF_BFLASKTBC3      = GetSpellInfo(28518);  --"Flask of Fortification"
+  SMARTBUFF_BFLASKTBC4      = GetSpellInfo(28521);  --"Flask of Blinding Light"
+  SMARTBUFF_BFLASKTBC5      = GetSpellInfo(28519);  --"Flask of Mighty Versatility"
   SMARTBUFF_BFLASK1         = GetSpellInfo(53760);  --"Flask of Endless Rage"
   SMARTBUFF_BFLASK2         = GetSpellInfo(53755);  --"Flask of the Frost Wyrm"
   SMARTBUFF_BFLASK3         = GetSpellInfo(53758);  --"Flask of Stoneblood"
@@ -594,11 +621,29 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_BFLASKLEG3      = GetSpellInfo(188031); --"Flask of the Whispered Pact"
   SMARTBUFF_BFLASKLEG4      = GetSpellInfo(188033); --"Flask of the Seventh Demon"
   
+  S.LinkFlaskTBC            = { SMARTBUFF_BFLASKTBC1, SMARTBUFF_BFLASKTBC2, SMARTBUFF_BFLASKTBC3, SMARTBUFF_BFLASKTBC4, SMARTBUFF_BFLASKTBC5 };
   S.LinkFlaskCT7            = { SMARTBUFF_BFLASKCT1, SMARTBUFF_BFLASKCT2, SMARTBUFF_BFLASKCT3, SMARTBUFF_BFLASKCT4, SMARTBUFF_BFLASKCT5 };
   S.LinkFlaskMoP            = { SMARTBUFF_BFLASKCT61, SMARTBUFF_BFLASKCT62, SMARTBUFF_BFLASKCT63, SMARTBUFF_BFLASKMOP2, SMARTBUFF_BFLASKMOP3, SMARTBUFF_BFLASKMOP4, SMARTBUFF_BFLASKMOP5, SMARTBUFF_BFLASKMOP6 };
   S.LinkFlaskWoD            = { SMARTBUFF_BFLASKWOD1, SMARTBUFF_BFLASKWOD2, SMARTBUFF_BFLASKWOD3, SMARTBUFF_BFLASKWOD4, SMARTBUFF_BGRFLASKWOD1, SMARTBUFF_BGRFLASKWOD2, SMARTBUFF_BGRFLASKWOD3, SMARTBUFF_BGRFLASKWOD4 };
   S.LinkFlaskLeg            = { SMARTBUFF_BFLASKLEG1, SMARTBUFF_BFLASKLEG2, SMARTBUFF_BFLASKLEG3, SMARTBUFF_BFLASKLEG4 };
   
+  SMARTBUFF_BELIXIRTBC1     = GetSpellInfo(54494);  --"Major Agility" B
+  SMARTBUFF_BELIXIRTBC2     = GetSpellInfo(33726);  --"Mastery" B
+  SMARTBUFF_BELIXIRTBC3     = GetSpellInfo(28491);  --"Healing Power" B
+  SMARTBUFF_BELIXIRTBC4     = GetSpellInfo(28502);  --"Major Defense" G
+  SMARTBUFF_BELIXIRTBC5     = GetSpellInfo(28490);  --"Major Strength" B
+  SMARTBUFF_BELIXIRTBC6     = GetSpellInfo(39625);  --"Major Fortitude" G
+  SMARTBUFF_BELIXIRTBC7     = GetSpellInfo(28509);  --"Major Mageblood" B
+  SMARTBUFF_BELIXIRTBC8     = GetSpellInfo(39627);  --"Draenic Wisdom" B
+  SMARTBUFF_BELIXIRTBC9     = GetSpellInfo(54452);  --"Adept's Elixir" B
+  SMARTBUFF_BELIXIRTBC10    = GetSpellInfo(134870); --"Empowerment" B
+  SMARTBUFF_BELIXIRTBC11    = GetSpellInfo(33720);  --"Onslaught Elixir" B
+  SMARTBUFF_BELIXIRTBC12    = GetSpellInfo(28503);  --"Major Shadow Power" B
+  SMARTBUFF_BELIXIRTBC13    = GetSpellInfo(39628);  --"Ironskin" G
+  SMARTBUFF_BELIXIRTBC14    = GetSpellInfo(39626);  --"Earthen Elixir" G
+  SMARTBUFF_BELIXIRTBC15    = GetSpellInfo(28493);  --"Major Frost Power" B
+  SMARTBUFF_BELIXIRTBC16    = GetSpellInfo(38954);  --"Fel Strength Elixir" B
+  SMARTBUFF_BELIXIRTBC17    = GetSpellInfo(28501);  --"Major Firepower" B
   SMARTBUFF_BELIXIR1        = GetSpellInfo(28497);  --"Mighty Agility" B
   SMARTBUFF_BELIXIR2        = GetSpellInfo(60347);  --"Mighty Thoughts" G
   SMARTBUFF_BELIXIR3        = GetSpellInfo(53751);  --"Elixir of Mighty Fortitude" G
@@ -1149,6 +1194,28 @@ function SMARTBUFF_InitSpellList()
   
   -- Potions
   SMARTBUFF_POTION = {
+    {SMARTBUFF_ELIXIRTBC1, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC1},
+    {SMARTBUFF_ELIXIRTBC2, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC2},
+    {SMARTBUFF_ELIXIRTBC3, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC3},
+    {SMARTBUFF_ELIXIRTBC4, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC4},
+    {SMARTBUFF_ELIXIRTBC5, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC5},
+    {SMARTBUFF_ELIXIRTBC6, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC6},
+    {SMARTBUFF_ELIXIRTBC7, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC7},
+    {SMARTBUFF_ELIXIRTBC8, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC8},
+    {SMARTBUFF_ELIXIRTBC9, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC9},
+    {SMARTBUFF_ELIXIRTBC10, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC10},
+    {SMARTBUFF_ELIXIRTBC11, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC11},
+    {SMARTBUFF_ELIXIRTBC12, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC12},
+    {SMARTBUFF_ELIXIRTBC13, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC13},
+    {SMARTBUFF_ELIXIRTBC14, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC14},
+    {SMARTBUFF_ELIXIRTBC15, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC15},
+    {SMARTBUFF_ELIXIRTBC16, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC16},
+    {SMARTBUFF_ELIXIRTBC17, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BELIXIRTBC17},
+    {SMARTBUFF_FLASKTBC1, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKTBC1}, --, S.LinkFlaskTBC},
+    {SMARTBUFF_FLASKTBC2, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKTBC2},
+    {SMARTBUFF_FLASKTBC3, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKTBC3},
+    {SMARTBUFF_FLASKTBC4, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKTBC4},
+    {SMARTBUFF_FLASKTBC5, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKTBC5},
     {SMARTBUFF_FLASKLEG1, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKLEG1, S.LinkFlaskLeg},
 	{SMARTBUFF_FLASKLEG2, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKLEG2},
 	{SMARTBUFF_FLASKLEG3, 60, SMARTBUFF_CONST_POTION, nil, SMARTBUFF_BFLASKLEG3},
