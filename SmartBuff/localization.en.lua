@@ -4,8 +4,8 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."- Added back Instant Poison for Outlaw Rogues\n\n"
-  .."- Added back Windfury and Flametongue Weapons for Shaman\n\n"
+  .."- Added TBC Elixirs & Flasks\n\n"
+  .."- Added back Water Shield for Resto Shaman\n\n"
   
   --[[
   .."- Thanks for donation:\n"
