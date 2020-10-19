@@ -157,7 +157,7 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_SEASONEDLOINS = GetItemInfo(154891); --"Seasoned Loins"
   SMARTBUFF_SAILORSPIE = GetItemInfo(154888); --"Sailor's Pie"
   SMARTBUFF_SPICEDSNAPPER = GetItemInfo(154886); --"Spiced Snapper"
-  SMARTBUFF_HEARTSBANEHEXWURST = GetItemInfo(163781); --"Heartsbane Hexwurst"
+  --SMARTBUFF_HEARTSBANEHEXWURST = GetItemInfo(163781); --"Heartsbane Hexwurst"
 
   
   -- Food item IDs
