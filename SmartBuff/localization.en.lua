@@ -4,8 +4,8 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."- Added TBC Elixirs & Flasks\n\n"
-  .."- Added back Water Shield for Resto Shaman\n\n"
+  .."- Added Paladin Auras\nNOTE: Crusader Aura only triggers while mounted. Devotion/Retribution will trigger when not mounted.\n\n"
+  .."- \n\n"
   
   --[[
   .."- Thanks for donation:\n"
