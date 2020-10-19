@@ -109,8 +109,8 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_WIZARDOIL5          = GetItemInfo(22522); --"Superior Wizard Oil"
   
   -- Food
-  SMARTBUFF_KIBLERSBITS         = GetItemInfo(33874); --"Kibler's Bits"
-  SMARTBUFF_STORMCHOPS          = GetItemInfo(33866); --"Stormchops"
+--  SMARTBUFF_KIBLERSBITS         = GetItemInfo(33874); --"Kibler's Bits"
+--  SMARTBUFF_STORMCHOPS          = GetItemInfo(33866); --"Stormchops"
   SMARTBUFF_JUICYBEARBURGER     = GetItemInfo(35565); --"Juicy Bear Burger"
   SMARTBUFF_CRUNCHYSPIDER       = GetItemInfo(22645); --"Crunchy Spider Surprise"
   SMARTBUFF_LYNXSTEAK           = GetItemInfo(27635); --"Lynx Steak"
