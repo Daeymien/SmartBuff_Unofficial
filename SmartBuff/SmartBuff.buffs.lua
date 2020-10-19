@@ -109,27 +109,35 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_WIZARDOIL5          = GetItemInfo(22522); --"Superior Wizard Oil"
   
   -- Food
-  SMARTBUFF_SAGEFISHDELIGHT     = GetItemInfo(21217); --"Sagefish Delight"
-  SMARTBUFF_BUZZARDBITES        = GetItemInfo(27651); --"Buzzard Bites"
-  SMARTBUFF_RAVAGERDOG          = GetItemInfo(27655); --"Ravager Dog"
-  SMARTBUFF_FELTAILDELIGHT      = GetItemInfo(27662); --"Feltail Delight"
-  SMARTBUFF_CLAMBAR             = GetItemInfo(30155); --"Clam Bar"
-  SMARTBUFF_BROILEDBLOODFIN     = GetItemInfo(33867); --"Broiled Bloodfin"
-  SMARTBUFF_BLACKENEDSPOREFISH  = GetItemInfo(27663); --"Blackened Sporefish"
-  SMARTBUFF_BLACKENEDBASILISK   = GetItemInfo(27657); --"Blackened Basilisk"
-  SMARTBUFF_GRILLEDMUDFISH      = GetItemInfo(27664); --"Grilled Mudfish"
-  SMARTBUFF_POACHEDBLUEFISH     = GetItemInfo(27665); --"Poached Bluefish"
+  SMARTBUFF_KIBLERSBITS         = GetItemInfo(33874); --"Kibler's Bits"
+  SMARTBUFF_STORMCHOPS          = GetItemInfo(33866); --"Stormchops"
+  SMARTBUFF_JUICYBEARBURGER     = GetItemInfo(35565); --"Juicy Bear Burger"
+  SMARTBUFF_CRUNCHYSPIDER       = GetItemInfo(22645); --"Crunchy Spider Surprise"
+  SMARTBUFF_LYNXSTEAK           = GetItemInfo(27635); --"Lynx Steak"
+  SMARTBUFF_CHARREDBEARKABOBS   = GetItemInfo(35563); --"Charred Bear Kabobs"
+  SMARTBUFF_BATBITES            = GetItemInfo(27636); --"Bat Bites"
+  SMARTBUFF_ROASTEDMOONGRAZE    = GetItemInfo(24105); --"Roasted Moongraze Tenderloin"
+  SMARTBUFF_MOKNATHALSHORTRIBS  = GetItemInfo(31672); --"Mok'Nathal Shortribs"
+  SMARTBUFF_CRUNCHYSERPENT      = GetItemInfo(31673); --"Crunchy Serpent"
   SMARTBUFF_ROASTEDCLEFTHOOF    = GetItemInfo(27658); --"Roasted Clefthoof"
-  SMARTBUFF_SPICYHOTTALBUK      = GetItemInfo(33872); --"Spicy Hot Talbuk"
-  SMARTBUFF_SKULLFISHSOUP       = GetItemInfo(33825); --"Skullfish Soup"
+  SMARTBUFF_FISHERMANSFEAST     = GetItemInfo(33052); --"Fisherman's Feast"
   SMARTBUFF_WARPBURGER          = GetItemInfo(27659); --"Warp Burger"
+  SMARTBUFF_RAVAGERDOG          = GetItemInfo(27655); --"Ravager Dog"
+  SMARTBUFF_SKULLFISHSOUP       = GetItemInfo(33825); --"Skullfish Soup"
+  SMARTBUFF_BUZZARDBITES        = GetItemInfo(27651); --"Buzzard Bites"
   SMARTBUFF_TALBUKSTEAK         = GetItemInfo(27660); --"Talbuk Steak"
   SMARTBUFF_GOLDENFISHSTICKS    = GetItemInfo(27666); --"Golden Fish Sticks"
-  SMARTBUFF_CRUNCHYSERPENT      = GetItemInfo(31673); --"Crunchy Serpent"
-  SMARTBUFF_MOKNATHALSHORTRIBS  = GetItemInfo(31672); --"Mok'Nathal Shortribs"
+  SMARTBUFF_SPICYHOTTALBUK      = GetItemInfo(33872); --"Spicy Hot Talbuk"
+  SMARTBUFF_FELTAILDELIGHT      = GetItemInfo(27662); --"Feltail Delight"
+  SMARTBUFF_BLACKENEDSPOREFISH  = GetItemInfo(27663); --"Blackened Sporefish"
+  SMARTBUFF_HOTAPPLECIDER       = GetItemInfo(34411); --"Hot Apple Cider"
+  SMARTBUFF_BROILEDBLOODFIN     = GetItemInfo(33867); --"Broiled Bloodfin"
   SMARTBUFF_SPICYCRAWDAD        = GetItemInfo(27667); --"Spicy Crawdad"
-  --SMARTBUFF_FISHERMANSFEAST     = GetItemInfo(33052); --"Fisherman's Feast"
-  --SMARTBUFF_HOTAPPLECIDER       = GetItemInfo(34411); --"Hot Apple Cider"
+  SMARTBUFF_POACHEDBLUEFISH     = GetItemInfo(27665); --"Poached Bluefish"
+  SMARTBUFF_BLACKENEDBASILISK   = GetItemInfo(27657); --"Blackened Basilisk"
+  SMARTBUFF_GRILLEDMUDFISH      = GetItemInfo(27664); --"Grilled Mudfish"
+  SMARTBUFF_CLAMBAR             = GetItemInfo(30155); --"Clam Bar"
+  SMARTBUFF_SAGEFISHDELIGHT     = GetItemInfo(21217); --"Sagefish Delight"
   SMARTBUFF_SALTPEPPERSHANK = GetItemInfo(133557); --"Salt & Pepper Shank"
   SMARTBUFF_PICKLEDSTORMRAY = GetItemInfo(133562); --"Pickled Stormray"
   SMARTBUFF_DROGBARSTYLESALMON = GetItemInfo(133569); --"Drogbar-Style Salmon"
@@ -1023,7 +1031,16 @@ function SMARTBUFF_InitSpellList()
     {SMARTBUFF_FELTAILDELIGHT, 30, SMARTBUFF_CONST_FOOD},
     {SMARTBUFF_RAVAGERDOG, 30, SMARTBUFF_CONST_FOOD},
     {SMARTBUFF_BUZZARDBITES, 30, SMARTBUFF_CONST_FOOD},
-    {SMARTBUFF_SAGEFISHDELIGHT, 15, SMARTBUFF_CONST_FOOD}
+    {SMARTBUFF_SAGEFISHDELIGHT, 15, SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_KIBLERSBITS,	20,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_STORMCHOPS,	30,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_JUICYBEARBURGER,	15,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_CRUNCHYSPIDER,	15,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_LYNXSTEAK,	15,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_CHARREDBEARKABOBS,	15,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_BATBITES,	15,	SMARTBUFF_CONST_FOOD},
+	{SMARTBUFF_ROASTEDMOONGRAZE,	15,	SMARTBUFF_CONST_FOOD}
+
   };
   
   for n, name in pairs(S.FoodItems) do
