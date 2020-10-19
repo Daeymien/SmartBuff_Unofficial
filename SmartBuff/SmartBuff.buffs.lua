@@ -226,7 +226,6 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_MiscItem5           = GetItemInfo(85500);  --"Anglers Fishing Raft"
   SMARTBUFF_MiscItem6           = GetItemInfo(85973);  --"Ancient Pandaren Fishing Charm"
   SMARTBUFF_MiscItem7           = GetItemInfo(94604);  --"Burning Seed"
-  SMARTBUFF_MiscItem8           = GetItemInfo(35275);  --"Orb of the Sin'dorei"
   SMARTBUFF_MiscItem9           = GetItemInfo(92738);  --"Safari Hat"
   SMARTBUFF_MiscItem10          = GetItemInfo(110424); --"Savage Safari Hat"
   SMARTBUFF_MiscItem11          = GetItemInfo(118922); --"Oralius' Whispering Crystal"
@@ -234,7 +233,6 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_MiscItem13          = GetItemInfo(129210); --"Fel Crystal Fragments"
   SMARTBUFF_MiscItem14          = GetItemInfo(128475); --"Empowered Augment Rune"
   SMARTBUFF_MiscItem15          = GetItemInfo(128482); --"Empowered Augment Rune"
-  SMARTBUFF_MiscItem16          = GetItemInfo(122298); --"Bodyguard Miniaturization Device"
   SMARTBUFF_MiscItem17          = GetItemInfo(147707); --"Repurposed Fel Focuser"
   
   SMARTBUFF_FLASKTBC1           = GetItemInfo(22854);  --"Flask of Relentless Assault"
@@ -1119,6 +1117,7 @@ function SMARTBUFF_InitSpellList()
   AddItem(129165, 193345,  10); --Barnacle-Encrusted Gem
   AddItem(116115, 170869,  60); -- Blazing Wings
   AddItem(133997, 203533,   0); --Black Ice
+  AddItem(122298, 181642,  60); --Bodyguard Miniaturization Device
   AddItem(163713, 279934,  30); --Brazier Cap
   AddItem(128310, 189363,  10); --Burning Blade
   AddItem(116440, 171554,  20); --Burning Defender's Medallion
@@ -1173,6 +1172,7 @@ function SMARTBUFF_InitSpellList()
   AddItem(138873, 217597,   5); --Mystical Frosh Hat
   AddItem(163795, 280308,  10); --Oomgut Ritual Drum
   AddItem(  1973,  16739,   5); --Orb of Deception
+  AddItem( 35275, 160331,  30); --Orb of the Sin'dorei
   AddItem(158149, 264091,  30); --Overtuned Corgi Goggles
   AddItem(130158, 195949,   5); --Path of Elothir
   AddItem(127864, 188172,  60); --Personal Spotlight
