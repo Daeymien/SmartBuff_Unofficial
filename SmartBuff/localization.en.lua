@@ -4,8 +4,9 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."- Added Paladin Auras\nNOTE: Crusader Aura only triggers while mounted. Devotion/Retribution will trigger when not mounted.\n\n"
-  .."- \n\n"
+  .."- Add backdrop to Splash options so seeing sliders and checkboxes is easier.\n\n"
+  .."- Add some lesser stat and fun crafted foods from TBC.\n\n"
+
   
   --[[
   .."- Thanks for donation:\n"
