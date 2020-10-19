@@ -98,7 +98,7 @@ self:SetBackdrop({
 
 	<Frame name="SmartBuffSplashFrameOptions" movable="true" toplevel="true" frameStrata="DIALOG" parent="SmartBuffSplashFrame" hidden="true" enableMouse="true">
 		<Size>
-			<AbsDimension x="420" y="52" />
+			<AbsDimension x="420" y="76" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent">
@@ -116,7 +116,7 @@ self:SetBackdrop({
 				<Anchors>
 					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
 						<Offset>
-							<AbsDimension x="2" y="-6"/>
+							<AbsDimension x="14" y="-18"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -136,7 +136,7 @@ self:SetBackdrop({
 
 			<Slider name="$parent_sldSize" inherits="OptionsSliderTemplate" hidden="false" parentKey="size">
 				<Size>
-					<AbsDimension x="152" y="16"/>
+					<AbsDimension x="152" y="14"/>
 				</Size>	
 				<Anchors>
 					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parent_btnFontStyle">
@@ -176,7 +176,7 @@ self:SetBackdrop({
 
 			<Slider name="$parent_sldIconSize" inherits="OptionsSliderTemplate" hidden="false" parentKey="iconsize">
 				<Size>
-					<AbsDimension x="120" y="16"/>
+					<AbsDimension x="120" y="14"/>
 				</Size>	
 				<Anchors>
 					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parent_sldSize">
@@ -280,7 +280,7 @@ self:SetBackdrop({
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="$parent">
 						<Offset>
-							<AbsDimension x="-2" y="-2"/>
+							<AbsDimension x="-14" y="-14"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -322,6 +322,19 @@ self:SetBackdrop({
 				self:EnableMouseWheel(false);
 			</OnLoad>
 			<OnShow>
+---------------------------------- testing WoW version
+local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
+---------------------------------- same code for 8.x and 9.x
+self:SetBackdrop({
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", 
+	edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+--	tile = true,
+--	tileSize = 32,
+--	edgeSize = 32,
+	insets = {left = 12, right = 12, top = 12, bottom = 11},
+})
+----------------------------------
 				self:ClearAllPoints();
 				self:SetPoint("TOPLEFT", self:GetParent(), "BOTTOMLEFT", 0, -2);
 			</OnShow>
