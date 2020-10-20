@@ -148,6 +148,7 @@ self:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 4, 48, 1);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						local o = SMARTBUFF_Options;
@@ -188,6 +189,7 @@ self:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 64, 4);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						local o = SMARTBUFF_Options;
