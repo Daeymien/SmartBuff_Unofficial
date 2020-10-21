@@ -4,8 +4,14 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
+  .."Changes since 8.x:\n\n"
   .."- Add backdrop to Splash options so seeing sliders and checkboxes is easier.\n\n"
-  .."- Add some lesser stat and fun crafted foods from TBC.\n\n"
+  .."- Added some TBC lesser stat crafted foods.\n\n"
+  .."- Add Paladin Auras\nNOTE: Crusader Aura only triggers while mounted. Devotion/Retribution will trigger when not mounted.\n\n"
+  .."- Add missing TBC Elixirs & Flasks (hopefully)\n\n"
+  .."- Re-add Water Shield for Resto Shaman\n\n"
+  .."- Re-adds Instant Poison for Outlaw Rogues\n\n"
+  .."- Re-adds Windfury Weapon and Flametongue Weapon for Shaman\n\n"
 
   
   --[[
