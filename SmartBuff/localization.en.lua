@@ -12,6 +12,7 @@ SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
   .."- Re-add Water Shield for Resto Shaman\n\n"
   .."- Re-adds Instant Poison for Outlaw Rogues\n\n"
   .."- Re-adds Windfury Weapon and Flametongue Weapon for Shaman\n\n"
+  .."- Add some missing BfA stat foods.\n\n"
 
   
   --[[
