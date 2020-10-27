@@ -1,5 +1,5 @@
 # SmartBuff_Unofficial
-Unofficial version for WoW 9.0.1
+Unofficial version for WoW 9.x
   
 Created by Aeldra (EU-Proudmoore)  
 Updated by Zwixx  
