@@ -40,10 +40,10 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v9.0.2";
+SMARTBUFF_VERSION       = "v9.0.2.1";
 SMARTBUFF_VERSIONNR     = 90000;
 SMARTBUFF_TITLE         = "SmartBuff";
-SMARTBUFF_SUBTITLE      = "Supports you in cast buffs";
+SMARTBUFF_SUBTITLE      = "Supports you in casting buffs";
 SMARTBUFF_DESC          = "Cast the most important buffs on you or party/raid members/pets";
 SMARTBUFF_VERS_TITLE    = SMARTBUFF_TITLE .. " " .. SMARTBUFF_VERSION;
 SMARTBUFF_OPTIONS_TITLE = SMARTBUFF_VERS_TITLE .. " Options";
@@ -649,7 +649,7 @@ function SMARTBUFF_OnUpdate(self, elapsed)
   if (not isInit) then
     if (isLoaded and GetTime() > tAutoBuff + 0.5) then
       tAutoBuff = GetTime();
-      _, tName = GetTalentInfo(1, 1, 1);
+      _, tName = GetTalentInfoBySpecialization(1, 1, 1);
       if (tName) then
         SMARTBUFF_OnEvent(self, "SMARTBUFF_UPDATE");
       end
