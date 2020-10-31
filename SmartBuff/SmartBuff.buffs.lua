@@ -647,16 +647,16 @@ function SMARTBUFF_InitSpellIDs()
   SMARTBUFF_BFLASKLEG2      = GetSpellInfo(188034); --"Flask of the Countless Armies"
   SMARTBUFF_BFLASKLEG3      = GetSpellInfo(188031); --"Flask of the Whispered Pact"
   SMARTBUFF_BFLASKLEG4      = GetSpellInfo(188033); --"Flask of the Seventh Demon"
-  SMARTBUFF_FLASKBFA1       = GetSpellInfo(251837); --"Flask of Endless Fathoms"
-  SMARTBUFF_FLASKBFA2       = GetSpellInfo(251836); --"Flask of the Currents"
-  SMARTBUFF_FLASKBFA3       = GetSpellInfo(251839); --"Flask of the Undertow"
-  SMARTBUFF_FLASKBFA4       = GetSpellInfo(251838); --"Flask of the Vast Horizon"
+  SMARTBUFF_BFLASKBFA1       = GetSpellInfo(251837); --"Flask of Endless Fathoms"
+  SMARTBUFF_BFLASKBFA2       = GetSpellInfo(251836); --"Flask of the Currents"
+  SMARTBUFF_BFLASKBFA3       = GetSpellInfo(251839); --"Flask of the Undertow"
+  SMARTBUFF_BFLASKBFA4       = GetSpellInfo(251838); --"Flask of the Vast Horizon"
   SMARTBUFF_BGRFLASKBFA1    = GetSpellInfo(298837); --"Greather Flask of Endless Fathoms"
   SMARTBUFF_BGRFLASKBFA2    = GetSpellInfo(298836); --"Greater Flask of the Currents"
   SMARTBUFF_BGRFLASKBFA3    = GetSpellInfo(298841); --"Greather Flask of teh Untertow"
   SMARTBUFF_BGRFLASKBFA4    = GetSpellInfo(298839); --"Greater Flask of the Vast Horizon"
-  SMARTBUFF_FLASKSL1        = GetSpellInfo(307185); --"Spectral Flask of Power"
-  SMARTBUFF_FLASKSL2        = GetSpellInfo(307187); --"Spectral Flask of Stamina"
+  SMARTBUFF_BFLASKSL1        = GetSpellInfo(307185); --"Spectral Flask of Power"
+  SMARTBUFF_BFLASKSL2        = GetSpellInfo(307187); --"Spectral Flask of Stamina"
   
   S.LinkFlaskTBC            = { SMARTBUFF_BFLASKTBC1, SMARTBUFF_BFLASKTBC2, SMARTBUFF_BFLASKTBC3, SMARTBUFF_BFLASKTBC4, SMARTBUFF_BFLASKTBC5 };
   S.LinkFlaskCT7            = { SMARTBUFF_BFLASKCT1, SMARTBUFF_BFLASKCT2, SMARTBUFF_BFLASKCT3, SMARTBUFF_BFLASKCT4, SMARTBUFF_BFLASKCT5 };
