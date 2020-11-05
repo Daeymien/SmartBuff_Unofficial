@@ -40,8 +40,8 @@ GameTooltip:SetUnitDebuff("unit", [index] or ["name", "rank"][, "filter"]);
 * The untilCanceled return value is true if the buff doesn't have its own duration (e.g. stealth)
 ]]--
 
-SMARTBUFF_VERSION       = "v9.0.2.2";
-SMARTBUFF_VERSIONNR     = 90000;
+SMARTBUFF_VERSION       = "v9.0.2.3";
+SMARTBUFF_VERSIONNR     = 90001;
 SMARTBUFF_TITLE         = "SmartBuff";
 SMARTBUFF_SUBTITLE      = "Supports you in casting buffs";
 SMARTBUFF_DESC          = "Cast the most important buffs on you or party/raid members/pets";
