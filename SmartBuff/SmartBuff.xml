@@ -644,6 +644,7 @@ SmartBuffSplashFrame:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 1, 60, 1);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						local o = SMARTBUFF_Options;
@@ -811,6 +812,7 @@ SmartBuffSplashFrame:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 10, 1);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						self:SetValue(SMARTBUFF_Options.MinCharges);
@@ -818,7 +820,7 @@ SmartBuffSplashFrame:SetBackdrop({
 					<OnShow>
 						local o = SMARTBUFF_Options;
 						if (o and o.MinCharges) then
-							SmartBuff_SetSliderText(self, SMARTBUFF_MSG_CHARGES, o.AutoTimer, "%d", true);
+							SmartBuff_SetSliderText(self, SMARTBUFF_MSG_CHARGES, o.MinCharges, "%d", true);
 						end
 					</OnShow>
 					<OnValueChanged>
@@ -858,6 +860,7 @@ SmartBuffSplashFrame:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 5, 0.2);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						local o = SMARTBUFF_Options;
@@ -897,6 +900,7 @@ SmartBuffSplashFrame:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 600, 10);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnShow>
 						local o = SMARTBUFF_Options;
@@ -1320,6 +1324,7 @@ SmartBuffSplashFrame:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 40, 1);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnValueChanged>
 						local o = SMARTBUFF_Options;
@@ -2912,6 +2917,7 @@ self:SetBackdrop({
 				<Scripts>
 					<OnLoad>
 						SmartBuffOptionsFrameSlider_OnLoad(self, 0, 3600, 10, true);
+						BackdropTemplateMixin.OnBackdropLoaded(self);
 					</OnLoad>
 					<OnValueChanged>
 						SmartBuff_BuffSetup_RBTime_OnValueChanged(self);
