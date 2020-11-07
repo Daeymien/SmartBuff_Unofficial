@@ -1257,6 +1257,8 @@ function SMARTBUFF_InitSpellList()
   AddItem(163565, 279407,   5); --Vulpera Scrapper's Armor
   AddItem(163924, 280632,  30); --Whiskerwax Candle
   AddItem( 97919, 141917,   3); --Whole-Body Shrinka'
+  AddItem(167698, 293671,  60); --Secret Fish Goggles
+  AddItem(169109, 299445,  60); --Beeholder's Goggles
   
   
   -- Potions
