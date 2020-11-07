@@ -15,6 +15,7 @@ SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
   .."- Add some missing BfA stat foods.\n\n"
   .."- Add Amplify Curse and Demon Armor Warlock PvP Talents.\n\n"
   .."- Re-Add Conjure Mana Gem for Mages.\n\n"
+  .."- Fix Charges slider resetting and having incorrect value.\n\n"
 
   
   --[[
