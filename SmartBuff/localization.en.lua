@@ -4,18 +4,8 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."Changes since 8.x:\n\n"
-  .."- Add backdrop to Splash options so seeing sliders and checkboxes is easier.\n\n"
-  .."- Added some TBC lesser stat crafted foods.\n\n"
-  .."- Add Paladin Auras\nNOTE: Crusader Aura only triggers while mounted. Devotion/Retribution will trigger when not mounted.\n\n"
-  .."- Add TBC, BfA and SL Elixirs & Flasks\n\n"
-  .."- Re-add Water Shield for Resto Shaman\n\n"
-  .."- Re-adds Instant Poison for Outlaw Rogues\n\n"
-  .."- Re-adds Windfury Weapon and Flametongue Weapon for Shaman\n\n"
-  .."- Add some missing BfA stat foods.\n\n"
-  .."- Add Amplify Curse and Demon Armor Warlock PvP Talents.\n\n"
-  .."- Re-Add Conjure Mana Gem for Mages.\n\n"
-  .."- Fix Charges slider resetting and having incorrect value.\n\n"
+  .."Changes since 9.0.2.4:\n\n"
+  .."- Add Shadowcore Oil\n\n"
 
   
   --[[
