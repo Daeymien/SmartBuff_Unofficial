@@ -108,7 +108,7 @@ function SMARTBUFF_InitItemList()
   SMARTBUFF_WIZARDOIL4          = GetItemInfo(20749); --"Brilliant Wizard Oil"
   SMARTBUFF_WIZARDOIL5          = GetItemInfo(22522); --"Superior Wizard Oil"
   SMARTBUFF_SHADOWCOREOIL       = GetItemInfo(171285); --"Shadowcore Oil"
-  
+  SMARTBUFF_EMBALMERSOIL        = GetItemInfo(171286); --"Embalmer's Oil"  
   -- Food
 --  SMARTBUFF_KIBLERSBITS         = GetItemInfo(33874); --"Kibler's Bits"
 --  SMARTBUFF_STORMCHOPS          = GetItemInfo(33866); --"Stormchops"
@@ -1018,7 +1018,8 @@ function SMARTBUFF_InitSpellList()
     {SMARTBUFF_WIZARDOIL3, 60, SMARTBUFF_CONST_INV},
     {SMARTBUFF_WIZARDOIL2, 60, SMARTBUFF_CONST_INV},
     {SMARTBUFF_WIZARDOIL1, 60, SMARTBUFF_CONST_INV},
-    {SMARTBUFF_SHADOWCOREOIL, 60, SMARTBUFF_CONST_INV}
+    {SMARTBUFF_SHADOWCOREOIL, 60, SMARTBUFF_CONST_INV},
+    {SMARTBUFF_EMBALMERSOIL, 60, SMARTBUFF_CONST_INV}	
   };
 
   -- Tracking
