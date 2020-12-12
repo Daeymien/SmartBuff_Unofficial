@@ -4,8 +4,10 @@
 
 -- Whats new info
 SMARTBUFF_WHATSNEW = "|cffffffffWhat's new:|r\n\n"
-  .."Changes since 9.0.2.5:\n\n"
-  .."- Add Shadowcore Oil\n\n"
+  .."Changes since 9.0.2.6:\n\n"
+  .."- Add SL crafted buff foods.\n\n"
+  .."- Add Numbing Poison for Rogues.\n\n"
+  .."- Add Embalmer's Oil.\n\n"
 
   
   --[[
