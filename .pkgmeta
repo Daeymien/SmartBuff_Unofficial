@@ -1,0 +1,7 @@
+package-as: SmartBuff
+
+move-folders:
+ SmartBuff/SmartBuff: SmartBuff
+
+ignore:
+ - README.md
