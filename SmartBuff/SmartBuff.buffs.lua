@@ -53,8 +53,15 @@ local function AddItem(itemId, spellId, duration, link)
 end
 
 local function LoadToys()
-	C_ToyBox.SetCollectedShown(true)
+	if not CollectionsJournal then
+		_G.CollectionsJournal_LoadUI()
+	end
+
 	C_ToyBox.SetAllSourceTypeFilters(true)
+	C_ToyBox.SetAllExpansionTypeFilters(true)
+	C_ToyBox.SetCollectedShown(true)
+	C_ToyBox.SetUncollectedShown(false)
+	C_ToyBox.SetUnusableShown(true)
 	C_ToyBox.SetFilterString("")
 	
 	local nTotal = C_ToyBox.GetNumTotalDisplayedToys();
